@@ -1,3 +1,46 @@
+# MCP Prompts Android (AIDL) Implementation
+
+Tento repozitář obsahuje Android implementaci MCP Prompts serveru a AIDL rozhraní. Umožňuje integraci s Android aplikacemi a Taskerem, včetně podpory nativní Rust služby.
+
+## Účel
+
+- **Android aplikace**: Nativní klient a služba pro MCP Prompts
+- **AIDL rozhraní**: Propojení s dalšími aplikacemi (Tasker, automatizace)
+- **Integrace Rust**: Využití nativní Rust služby jako jádra
+
+## Struktura
+
+```
+android_app/
+├── android/           # Android projekt (Kotlin, Gradle)
+│   ├── app/
+│   └── ...
+```
+
+## Funkce
+
+- **Prompt API**: Správa a spouštění promptů na Androidu
+- **Tasker integrace**: Profily pro automatizaci
+- **AIDL**: Definice rozhraní pro komunikaci
+- **Testování**: Podpora pro Android emulátor a CI/CD
+
+## Build a nasazení
+
+```bash
+./gradlew build
+# nebo otevřít v Android Studiu
+```
+
+## CI/CD
+
+- Build a testy přes GitHub Actions
+- Publikace AAR knihovny do Maven Central
+- Docker image pro testování
+
+## Dokumentace
+
+- [docs/](../docs/) obsahuje detailní popis integrace a rozhraní
+
 # Architectural Analysis for Model Context Protocol Server Deployment on Android
 
 ## Executive Summary
